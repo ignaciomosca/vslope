@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/vslope/static/css/main.073c9b0a.css",
+    "main.js": "/vslope/static/js/main.788f6876.js",
+    "static/js/787.0b91a8e9.chunk.js": "/vslope/static/js/787.0b91a8e9.chunk.js",
+    "index.html": "/vslope/index.html",
+    "main.073c9b0a.css.map": "/vslope/static/css/main.073c9b0a.css.map",
+    "main.788f6876.js.map": "/vslope/static/js/main.788f6876.js.map",
+    "787.0b91a8e9.chunk.js.map": "/vslope/static/js/787.0b91a8e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.788f6876.js"
+  ]
+}
