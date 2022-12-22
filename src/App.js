@@ -44,76 +44,84 @@ function App() {
 
   return (
     <div className="App">
-      <p>
+      <h1>
         Calculate VSlope
-      </p>
+      </h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="V_grid">V_grid:</label>
+        <label htmlFor="V_grid" className='form-label'>V_grid:</label>
         <input
           type="text"
           id="V_grid"
           value={V_grid}
           onChange={(event) => setVGrid(event.target.value)}
+          className='form-input'
         />
         <br />
-        <label htmlFor="V_A">V_A:</label>
+        <label htmlFor="V_A" className='form-label'>V_A:</label>
         <input
           type="text"
           id="V_A"
           value={V_A}
           onChange={(event) => setVA(event.target.value)}
+          className='form-input'
         />
         <br />
-        <label htmlFor="V_B">V_B:</label>
+        <label htmlFor="V_B" className='form-label'>V_B:</label>
         <input
           type="text"
           id="V_B"
           value={V_B}
           onChange={(event) => setVB(event.target.value)}
+          className='form-input'
         />
         <br />
-        <label htmlFor="V_C">V_C:</label>
+        <label htmlFor="V_C" className='form-label'>V_C:</label>
         <input
           type="text"
           id="V_C"
           value={V_C}
           onChange={(event) => setVC(event.target.value)}
+          className='form-input'
         />
         <br />
-        <label htmlFor="V_D">V_D:</label>
+        <label htmlFor="V_D" className='form-label'>V_D:</label>
         <input
           type="text"
           id="V_D"
           value={V_D}
           onChange={(event) => setVD(event.target.value)}
+          className='form-input'
         />
         <br />
-        <label htmlFor="Slope">Slope:</label>
+        <label htmlFor="Slope" className='form-label'>Slope:</label>
         <input
           type="text"
           id="Slope"
           value={Slope}
           onChange={(event) => setSlope(event.target.value)}
+          className='form-input'
         />
         <br />
-        <label htmlFor="VBase">VBase:</label>
+        <label htmlFor="VBase" className='form-label'>VBase:</label>
         <input
           type="text"
           id="VBase"
           value={V_Base}
           onChange={(event) => setVBase(event.target.value)}
+          className='form-input'
         />
         <br />
         <br />
-        <label htmlFor="Qout">Qout:</label>
+        <label htmlFor="Qout" className='form-label'>Qout:</label>
         <input
           type="text"
           id="Qout"
           value={Q_out}
           onChange={(event) => setQOut(event.target.value)}
+          className='form-input'
         />
         <br />
-        <button type="submit">Calculate Q_out</button>
+        <button type="submit" className='form-button'>Calculate Q_out</button>
 
       </form>
     </div>
