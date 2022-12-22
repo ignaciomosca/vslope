@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/vslope/static/css/main.0b246b3e.css",
-    "main.js": "/vslope/static/js/main.a2056f7c.js",
+    "main.js": "/vslope/static/js/main.28a03321.js",
     "static/js/787.0b91a8e9.chunk.js": "/vslope/static/js/787.0b91a8e9.chunk.js",
     "index.html": "/vslope/index.html",
     "main.0b246b3e.css.map": "/vslope/static/css/main.0b246b3e.css.map",
-    "main.a2056f7c.js.map": "/vslope/static/js/main.a2056f7c.js.map",
+    "main.28a03321.js.map": "/vslope/static/js/main.28a03321.js.map",
     "787.0b91a8e9.chunk.js.map": "/vslope/static/js/787.0b91a8e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b246b3e.css",
-    "static/js/main.a2056f7c.js"
+    "static/js/main.28a03321.js"
   ]
 }
