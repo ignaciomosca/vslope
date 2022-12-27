@@ -5,19 +5,28 @@ import React, { useState } from 'react';
 function App() {
 
   // Declare state variables
+  const [V_Base, setVBase] = useState('');
+  const [Slope, setSlope] = useState('');
+  const [Hysteresis, setHysteresis] = useState('');
   const [V_grid, setVGrid] = useState('');
+  const [V_N, setVN] = useState('');
   const [V_A, setVA] = useState('');
   const [V_B, setVB] = useState('');
   const [V_C, setVC] = useState('');
   const [V_D, setVD] = useState('');
-  const [Slope, setSlope] = useState('');
-  const [V_Base, setVBase] = useState('');
   const [Q_out, setQOut] = useState('');
+
 
 
   // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    setVBase(86602.5);
+    setVB(V_N - Hysteresis/2);
+    setVC(V_B + Hysteresis);
+    setVA(V_B - Slope*V_Base);
+    setVD(V_C + Slope*V_Base);
 
     // Implement the algorithm here using the form values
     if (V_grid < V_A) {
@@ -32,14 +41,6 @@ function App() {
       setQOut(-1);
     }
 
-    // Reset form
-    setVGrid('');
-    setVA('');
-    setVB('');
-    setVC('');
-    setVD('');
-    setSlope('');
-    setVBase('');
   };
 
   return (
@@ -48,6 +49,24 @@ function App() {
         Calculate VSlope
       </h1>
       <form onSubmit={handleSubmit}>
+        <label htmlFor="Slope (between 0.04 and 0.07)" className='form-label'>Slope:</label>
+        <input
+          type="text"
+          id="Slope"
+          value={Slope}
+          onChange={(event) => setSlope(event.target.value)}
+          className='form-input'
+        />
+        <br />
+        <label htmlFor="Hysteresis (between 0 and 200)" className='form-label'>Hysteresis:</label>
+        <input
+          type="text"
+          id="Hysteresis"
+          value={Hysteresis}
+          onChange={(event) => setHysteresis(event.target.value)}
+          className='form-input'
+        />
+        <br />
         <label htmlFor="V_grid" className='form-label'>V_grid:</label>
         <input
           type="text"
@@ -57,57 +76,12 @@ function App() {
           className='form-input'
         />
         <br />
-        <label htmlFor="V_A" className='form-label'>V_A:</label>
+        <label htmlFor="V_N" className='form-label'>V_N:</label>
         <input
           type="text"
-          id="V_A"
-          value={V_A}
-          onChange={(event) => setVA(event.target.value)}
-          className='form-input'
-        />
-        <br />
-        <label htmlFor="V_B" className='form-label'>V_B:</label>
-        <input
-          type="text"
-          id="V_B"
-          value={V_B}
-          onChange={(event) => setVB(event.target.value)}
-          className='form-input'
-        />
-        <br />
-        <label htmlFor="V_C" className='form-label'>V_C:</label>
-        <input
-          type="text"
-          id="V_C"
-          value={V_C}
-          onChange={(event) => setVC(event.target.value)}
-          className='form-input'
-        />
-        <br />
-        <label htmlFor="V_D" className='form-label'>V_D:</label>
-        <input
-          type="text"
-          id="V_D"
-          value={V_D}
-          onChange={(event) => setVD(event.target.value)}
-          className='form-input'
-        />
-        <br />
-        <label htmlFor="Slope" className='form-label'>Slope:</label>
-        <input
-          type="text"
-          id="Slope"
-          value={Slope}
-          onChange={(event) => setSlope(event.target.value)}
-          className='form-input'
-        />
-        <br />
-        <label htmlFor="VBase" className='form-label'>VBase:</label>
-        <input
-          type="text"
-          id="VBase"
-          value={V_Base}
-          onChange={(event) => setVBase(event.target.value)}
+          id="V_N"
+          value={V_N}
+          onChange={(event) => setVN(event.target.value)}
           className='form-input'
         />
         <br />
