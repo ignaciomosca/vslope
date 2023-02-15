@@ -40,6 +40,7 @@ function App() {
     } else {
       setQOut(-1);
     }
+    
 
   };
 
